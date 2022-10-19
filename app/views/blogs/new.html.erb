@@ -1,0 +1,28 @@
+<%= form_with(model: @blog, local: true) do |form| %>
+<br>
+<br>
+<br>
+    <h3><div class="title"></h3>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div class="time">
+        <%= form.label :start_time %>
+        <%= form.datetime_select :start_time %>
+    </div>
+
+    <div class="content">
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+    </div>
+
+
+    <div class="submit">
+        <%= form.submit %>
+    </div>
+
+    <%= form.label :release, "表示状態" %><br>
+    <%= form.select :release,[["公開", "公開"],["非公開", "非公開"]], include_blank: "選択してください" %><br>
+
+<% end %>

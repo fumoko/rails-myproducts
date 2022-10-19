@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Everyone's Task</h1>
+
+<br>
+
+<%= link_to 'New Task', new_blog_path %>
+<br>
+<%= link_to 'MyPage', user_path(current_user.id) %>
+<br>
+<%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+
+<%= month_calendar events: @blogs do |date, blogs| %>
+<%= date.day %>
+
+<%# blogs.each do |blog| %>
+    <div>
+        <%#= link_to blog.title, blog %>
+    </div>
+
+<div class="release">
+        <ul>
+            <% blogs.each do |t| %>
+                <% if t.release == "公開" %> 
+                    <div class="blog">
+                        <li><%= t.title %></li>
+                    </div>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+    <div class="unrelease">
+        <ul>
+            <% blogs.each do |t| %>
+                <% if t.release == "非公開" %> 
+                    <div class="blog">
+                        <li><%= t.title %></li>
+                    </div>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+</div>
+
+<div class="">
+
+<%# end %>
+
+<% end %>
