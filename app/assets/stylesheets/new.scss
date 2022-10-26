@@ -1,15 +1,14 @@
 .post-container {
     margin: 50px auto;
     width: 50%;
-    border: solid #dde5f2;
     border-radius: 10px;
     text-align: center;
-}
-.title {
-    font-size: 32px;
+    padding: 1em;
+    border: 3px solid #323e63;
+    border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
     font-weight: bold;
-    margin-bottom: 30px;
 }
+
 input[type="text"] {
     width: 70%;
     height: 40px;

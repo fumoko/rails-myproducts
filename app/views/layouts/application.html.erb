@@ -8,20 +8,20 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <script src="https://kit.fontawesome.com/b7d1e3bceb.js" crossorigin="anonymous"></script>
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
     <header>
-      <h1>YourPace</h1>
       <div class="header-list">
-      <ul>
-        <li><%= link_to "ログイン", blogs_path %></li>
-        <li><%= link_to "ホーム", blogs_path %></li>
-        <li><%= link_to "新規投稿", new_blog_path %></li>
-      </ul
+      <ul>  
+        <li><%= link_to "Login", blogs_path %></li>
+        <li><%= link_to "Home", blogs_path %></li>
+      </ul>
       </div>
     </header>
     <main>
@@ -30,6 +30,48 @@
     <footer>
       <p>Copyright © momoko All Rights Reserved.</p>
     </footer>
-    
+      <div>
+          <p class="timechange-sample"></p>
+          <script type="text/javascript">
+            $(document).ready(function(){
+            var day = new Date();
+            var hour = day.getHours();
+      
+            if( hour <= 1 )	{	
+            $('.timechange-sample').css('background-image', 'url(https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG5pZ2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60)');
+            }
+            else if( hour <= 7 )	{	
+              $('.timechange-sample').css('background-image', 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3VucmlzZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60)');
+            }
+            else if( hour <= 11 ) {
+              $('.timechange-sample').css('background-image', 'url(https://images.unsplash.com/photo-1465488867967-ffb57e7f0a89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60)');
+            }
+            else if( hour <= 16 ) {	
+              $('.timechange-sample').css('background-image', 'url(https://images.unsplash.com/photo-1505533542167-8c89838bb19e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60)');
+            }
+            else if( hour <= 20 ) {
+              $('.timechange-sample').css('background-image', 'url(https://images.unsplash.com/photo-1519414442781-fbd745c5b497?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60)');
+            }
+            else if( hour <= 24 ) {
+            $('.timechange-sample').css('background-image','url(https://images.unsplash.com/photo-1582702877108-546b84049d77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60)');
+            }
+            });
+          </script>
+      </div>
+      <style>
+        .timechange-sample{
+          position: absolute;
+          top: 100px;
+          bottom: 0px;
+          z-index: -100;
+          width: 100%;
+          height: 1000px;
+          text-align: center;
+          padding: 120px 5px;
+          background-repeat: no-repeat;
+          background-size:100% auto;
+          opacity: 0.7 ;
+          }
+      </style>
   </body>
 </html>

@@ -18,46 +18,58 @@
     padding: 0;
     margin: 0 ;
 }
+
+
 body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-    background-size: cover;
-    background-color: rgba(189, 191, 192, 0.524);
-    color: #333333;
+    font-family: 'Mv Boli', 'Yu Gothic UI', sans-serif;
     
+    background-size: cover;
+    color: #333333;
+    height: 100%;
 }
+
 header {
-    background-color: rgba(189, 191, 192, 0.524);
-    height: 80px;
+    height: 100px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: right;
 }
+
 header a {
-    color: white; 
+    color: #333333; 
     text-decoration: none; 
+    text-align: right;
 }
+
 header h1 {
-    color: white;
+    color: 333333;
     margin-left: 20px;
+    text-align: right;
 }
+/* ログインとかホームのheader */
 .header-list {
     display: flex;
     align-items: center;
+    text-align: right;
+    margin-left: auto;
 }
-header ul {
-    display: flex;
-}
+
 header li {
     list-style: none;
     margin-right: 40px;
+    text-align: right;
+}
+header ul {
+    display: flex;
+    text-align: right;
 }
 
+
 footer {
-    color: white;
+    color: 323e63;
     height: 30px;
-    background-color: rgba(189, 191, 192, 0.524);
     bottom: 0;
     width: 100%;
     display: flex;
@@ -77,19 +89,19 @@ footer {
 
 .tab li a {
     display: block;
-    background:#ddd;
+    background:rgba(247, 204, 230, 0.524);
     margin:0 2px;
     padding:10px 20px;
 }
 
 .tab li.active a {
-    background:#fff;
+    background:rgba(247, 204, 230, 0.524);
 }
 
 .area {
     display: none;
     opacity: 0;
-    background: #fff;
+    background: rgba(247, 204, 230, 0.524);
     padding:50px 20px;
 }
 
@@ -112,24 +124,15 @@ footer {
 
 }
 
-body {
-    background:#eee;
-}
-
 ul {
     list-style:none;
-}
-
-a {
-    color:#333;
-    text-decoration: none;
 }
 
 .wrapper {
     width:100%;
     max-width: 960px;
     margin:30px auto;
-    background:#fefefe;
+    background:rgba(247, 204, 230, 0.524);
 }
 
 .area h2 {

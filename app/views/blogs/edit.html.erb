@@ -8,8 +8,8 @@
     </div>
 
     <div class="time">
-        <%= form.label :start_time %>
-        <%= form.datetime_select :start_time %>
+        <%= form.label :deadline %>
+        <%= form.datetime_select :deadline %>
     </div>
 
     <div class="content">
@@ -18,8 +18,8 @@
     </div>
 
     
-    <%= form.label :release, "表示状態" %><br>
-    <%= form.select :release,[["公開", "公開"],["非公開", "非公開"]], include_blank: "選択してください" %><br>
+    <%= form.label :release, "Status" %><br>
+    <%= form.select :release,[["Public", "Publi"],["Private", "Private"]], include_blank: "選択してください" %><br>
 
     <div class="submit">
         <%= form.submit %>

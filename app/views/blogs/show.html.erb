@@ -17,6 +17,9 @@
 
 
 
-<%= link_to "Delete", blog_path(t.id), method: :delete %>
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to "Done", blog_path(@blog.id), method: :delete %>
+    <i class="fa-regular fa-circle-check"></i>
+<%= link_to 'Edit', edit_blog_path(@blog) %> 
+    <i class="fa-regular fa-pen-to-square"></i>
 <%= link_to 'Back', blogs_path %>
+    <i class="fa-regular fa-share-from-square"></i>

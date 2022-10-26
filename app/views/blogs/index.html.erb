@@ -1,17 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Everyone's Task</h1>
+<div class="momo">
 
+<h3>Everyone's Task</h3>
+
+<div class="box" align="right">
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+</div>
 <br>
 
 <%= link_to 'New Task', new_blog_path %>
+    <i class="fa-regular fa-calendar-plus"></i>
+<br>
 <br>
 <%= link_to 'MyPage', user_path(current_user.id) %>
+    <i class="fa-regular fa-user"></i>
 <br>
-<%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+<br>
+<br>
 
 <%= month_calendar events: @blogs do |date, blogs| %>
 <%= date.day %>
+
 
 <%# blogs.each do |blog| %>
     <div>
@@ -21,7 +31,7 @@
 <div class="release">
         <ul>
             <% blogs.each do |t| %>
-                <% if t.release == "公開" %> 
+                <% if t.release == "Public" %> 
                     <div class="blog">
                         <li><%= t.title %></li>
                     </div>
@@ -32,7 +42,7 @@
     <div class="unrelease">
         <ul>
             <% blogs.each do |t| %>
-                <% if t.release == "非公開" %> 
+                <% if t.release == "Private" %> 
                     <div class="blog">
                         <li><%= t.title %></li>
                     </div>
@@ -42,8 +52,10 @@
     </div>
 </div>
 
-<div class="">
-
 <%# end %>
 
 <% end %>
+</div>
+
+
+

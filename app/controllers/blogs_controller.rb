@@ -31,7 +31,7 @@ class BlogsController < ApplicationController
     
     def destroy
         @blog = Blog.find(params[:id])
-        blog.destroy
+        @blog.destroy
         @blog.destroy
             redirect_to blogs_path, notice:"削除しました"
     end
